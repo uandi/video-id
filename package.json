@@ -1,0 +1,55 @@
+{
+  "name": "@uandi/video-id",
+  "version": "1.0.0",
+  "description": "Get the YouTube or Vimeo video id from a url or embed string.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uandi/video-id.git"
+  },
+  "author": "u+i interact GmbH (https://github.com/uandi)",
+  "type": "module",
+  "keywords": [
+    "youtube",
+    "vimeo",
+    "video"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "prebuild": "rimraf dist && npm run lint",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "lint": "eslint .",
+    "format": "prettier --write ./src"
+  },
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "path": "^0.12.7",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "typescript": "~5.7.3",
+    "typescript-eslint": "^8.29.0",
+    "vite": "^6.2.0",
+    "vite-plugin-dts": "^4.5.3",
+    "vitest": "^3.1.1"
+  },
+  "bugs": {
+    "url": "https://github.com/uandi/video-id/issues"
+  },
+  "homepage": "https://github.com/uandi/video-id#readme"
+}
